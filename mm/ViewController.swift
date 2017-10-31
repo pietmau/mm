@@ -1,25 +1,20 @@
-//
-//  ViewController.swift
-//  mm
-//
-//  Created by Maurizio Pietrantuono on 31/10/2017.
-//  Copyright © 2017 Maurizio Pietrantuono. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        }
+    
+    @IBAction func OnPickClicked(_ sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
+        dismiss(animated: true, completion: nil)
     }
-
-
+    
 }
 
