@@ -28,6 +28,11 @@
                                             <action selector="OnPickClicked:" destination="BYZ-38-t0r" id="aTg-r2-Jdn"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Cam" id="pnD-1j-Nxk">
+                                        <connections>
+                                            <action selector="onCamClicked:" destination="BYZ-38-t0r" id="0BB-0Q-Grb"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hzn-0a-wvg">

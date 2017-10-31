@@ -6,11 +6,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        }
+    }
     
     @IBAction func OnPickClicked(_ sender: UIBarButtonItem) {
+        showPicker(source: .photoLibrary)
+    }
+    
+    @IBAction func onCamClicked(_ sender: UIBarButtonItem) {
+        showPicker(source: .camera)
+    }
+    
+    private func showPicker(source:UIImagePickerControllerSourceType){
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        imagePicker.sourceType = source
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -19,7 +28,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             myImage.image = image
         }
-    
+        
         dismiss(animated: true, completion: nil)
     }
     
