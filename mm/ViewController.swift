@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomText.text = "BOTTOM"
         topText.delegate = topDelegate
         bottomText.delegate = bottomDelegate
+        
         let textAttributes:[String:Any] = [
             NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
             NSAttributedStringKey.foregroundColor.rawValue: UIColor.black,
@@ -30,6 +31,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topText.defaultTextAttributes = textAttributes
         topText.textAlignment = .center
         bottomText.textAlignment = .center
+    }
+    
+    @IBAction func onShareClicked(_ sender: Any) {
     }
     
     @IBAction func OnPickClicked(_ sender: UIBarButtonItem) {
