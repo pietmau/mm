@@ -6,9 +6,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var uiImageView: UIImageView!
     
-    @IBOutlet weak var upperLabel: UILabel!
-    
-    @IBOutlet weak var lowerLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
