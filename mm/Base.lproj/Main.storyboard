@@ -44,12 +44,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAE-px-i1W">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAE-px-i1W">
                                 <rect key="frame" x="0.0" y="20" width="40" height="30"/>
                                 <state key="normal" title="Share"/>
-                                <connections>
-                                    <action selector="onShareClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQB-di-7Lc"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58S-h6-e36">
                                 <rect key="frame" x="0.0" y="47" width="375" height="30"/>
@@ -81,6 +78,7 @@
                     <connections>
                         <outlet property="bottomText" destination="pzZ-D7-GDq" id="rye-2V-eth"/>
                         <outlet property="camUiBarButtonItem" destination="pnD-1j-Nxk" id="Anz-KC-dJe"/>
+                        <outlet property="shareButton" destination="NAE-px-i1W" id="sUi-ZZ-GwM"/>
                         <outlet property="topText" destination="58S-h6-e36" id="ETb-9I-DKF"/>
                         <outlet property="uiImageView" destination="hzn-0a-wvg" id="6py-RS-o6F"/>
                     </connections>

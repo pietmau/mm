@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3967226488AD78D5AD982F51 /* SaverSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396722DDDFF8EDD63D9D33B5 /* SaverSharer.swift */; };
+		396726B4614C009C364CB680 /* ScreenCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396724178AEE3527EC999CAD /* ScreenCapturer.swift */; };
+		39672CEEECD69AEC12333A4E /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39672932BF0564FB3DEDA90F /* Meme.swift */; };
 		9CFCB8C81FA8D1A000AD2DF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFCB8C71FA8D1A000AD2DF2 /* AppDelegate.swift */; };
 		9CFCB8CA1FA8D1A000AD2DF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFCB8C91FA8D1A000AD2DF2 /* ViewController.swift */; };
 		9CFCB8CD1FA8D1A000AD2DF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFCB8CB1FA8D1A000AD2DF2 /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		396722DDDFF8EDD63D9D33B5 /* SaverSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaverSharer.swift; sourceTree = "<group>"; };
+		396724178AEE3527EC999CAD /* ScreenCapturer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenCapturer.swift; sourceTree = "<group>"; };
+		39672932BF0564FB3DEDA90F /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		9CFCB8C41FA8D1A000AD2DF2 /* mm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFCB8C71FA8D1A000AD2DF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CFCB8C91FA8D1A000AD2DF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		396720EBBD16826D5A3F5D4A /* saversharer */ = {
+			isa = PBXGroup;
+			children = (
+				396722DDDFF8EDD63D9D33B5 /* SaverSharer.swift */,
+			);
+			path = saversharer;
+			sourceTree = "<group>";
+		};
 		9CFCB8BB1FA8D1A000AD2DF2 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +77,9 @@
 				9CFCB8CE1FA8D1A000AD2DF2 /* Assets.xcassets */,
 				9CFCB8D01FA8D1A000AD2DF2 /* LaunchScreen.storyboard */,
 				9CFCB8D31FA8D1A000AD2DF2 /* Info.plist */,
+				396720EBBD16826D5A3F5D4A /* saversharer */,
+				39672932BF0564FB3DEDA90F /* Meme.swift */,
+				396724178AEE3527EC999CAD /* ScreenCapturer.swift */,
 			);
 			path = mm;
 			sourceTree = "<group>";
@@ -150,6 +167,9 @@
 				9CFCB8DD1FA9DADE00AD2DF2 /* CustomTextDelegate.swift in Sources */,
 				9CFCB8CA1FA8D1A000AD2DF2 /* ViewController.swift in Sources */,
 				9CFCB8C81FA8D1A000AD2DF2 /* AppDelegate.swift in Sources */,
+				3967226488AD78D5AD982F51 /* SaverSharer.swift in Sources */,
+				39672CEEECD69AEC12333A4E /* Meme.swift in Sources */,
+				396726B4614C009C364CB680 /* ScreenCapturer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
