@@ -38,21 +38,42 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hzn-0a-wvg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTc-6m-6Jj">
+                                <rect key="frame" x="0.0" y="48" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbw-gM-3jX">
+                                <rect key="frame" x="0.0" y="552" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="pbw-gM-3jX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1ZR-BQ-io3"/>
                             <constraint firstItem="s5A-GR-IO4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4ID-up-sfo"/>
+                            <constraint firstItem="s5A-GR-IO4" firstAttribute="top" secondItem="pbw-gM-3jX" secondAttribute="bottom" constant="50.5" id="4lh-OV-jPD"/>
+                            <constraint firstItem="cTc-6m-6Jj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="7GH-KU-wjB"/>
                             <constraint firstItem="hzn-0a-wvg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9EN-EM-0yT"/>
                             <constraint firstItem="hzn-0a-wvg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CBq-I3-Xzb"/>
                             <constraint firstItem="s5A-GR-IO4" firstAttribute="top" secondItem="hzn-0a-wvg" secondAttribute="bottom" id="CF4-CK-FdA"/>
+                            <constraint firstItem="pbw-gM-3jX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TmC-T8-W8h"/>
                             <constraint firstItem="s5A-GR-IO4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UgM-XV-ksv"/>
                             <constraint firstItem="s5A-GR-IO4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ahj-az-nTN"/>
                             <constraint firstItem="hzn-0a-wvg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bHM-E8-jmC"/>
+                            <constraint firstItem="cTc-6m-6Jj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cZL-yR-d41"/>
+                            <constraint firstItem="cTc-6m-6Jj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sPJ-iA-x8v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="myImage" destination="hzn-0a-wvg" id="k5N-tv-Y8a"/>
+                        <outlet property="camUiBarButtonItem" destination="pnD-1j-Nxk" id="Anz-KC-dJe"/>
+                        <outlet property="lowerLabel" destination="pbw-gM-3jX" id="By1-yL-EB1"/>
+                        <outlet property="uiImageView" destination="hzn-0a-wvg" id="6py-RS-o6F"/>
+                        <outlet property="upperLabel" destination="cTc-6m-6Jj" id="tR1-kr-Jvf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
