@@ -57,15 +57,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
     
     @objc func keyboardWillShow(_ sender:Notification){
         view.frame = view.frame.offsetBy(dx: 0, dy: -getY(notification:sender))
+    }
+    
+    @objc func keyboardWillHide(_ sender:Notification){
+        view.frame = view.frame.offsetBy(dx: 0, dy: +getY(notification:sender))
     }
     
     func getY(notification:Notification)->CGFloat{
