@@ -1,20 +1,35 @@
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
-    @IBOutlet weak var camUiBarButtonItem: UIBarButtonItem!
+    @IBOutlet  var camUiBarButtonItem: UIBarButtonItem!
     
-    @IBOutlet weak var uiImageView: UIImageView!
+    @IBOutlet  var uiImageView: UIImageView!
     
-
+    @IBOutlet  var topText: UITextField!
+    
+    @IBOutlet  var bottomText: UITextField!
+    
+    let topDelegate = CustomTextDelegate()
+    
+    let bottomDelegate = CustomTextDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         camUiBarButtonItem.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-        upperLabel.text = "TOP"
-        lowerLabel.text = "BOTTOM"
-        upperLabel.textAlignment = .center
-        lowerLabel.textAlignment = .center
+        topText.text = "TOP"
+        bottomText.text = "BOTTOM"
+        topText.delegate = topDelegate
+        bottomText.delegate = bottomDelegate
+        let textAttributes:[String:Any] = [
+            NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
+            NSAttributedStringKey.foregroundColor.rawValue: UIColor.black,
+            NSAttributedStringKey.font.rawValue: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSAttributedStringKey.strokeWidth.rawValue: -1,]
+        bottomText.defaultTextAttributes = textAttributes
+        topText.defaultTextAttributes = textAttributes
+        topText.textAlignment = .center
+        bottomText.textAlignment = .center
     }
     
     @IBAction func OnPickClicked(_ sender: UIBarButtonItem) {

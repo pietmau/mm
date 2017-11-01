@@ -42,13 +42,13 @@
                                 <rect key="frame" x="0.0" y="36" width="375" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzZ-D7-GDq">
                                 <rect key="frame" x="0.0" y="577" width="375" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,7 +70,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomText" destination="pzZ-D7-GDq" id="rye-2V-eth"/>
                         <outlet property="camUiBarButtonItem" destination="pnD-1j-Nxk" id="Anz-KC-dJe"/>
+                        <outlet property="topText" destination="58S-h6-e36" id="ETb-9I-DKF"/>
                         <outlet property="uiImageView" destination="hzn-0a-wvg" id="6py-RS-o6F"/>
                     </connections>
                 </viewController>
