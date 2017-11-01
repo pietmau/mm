@@ -39,6 +39,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func onShareClicked(_ sender: Any) {
         let memedImage = ScreenCapturer(self).capture()
         let meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: uiImageView.image!, memedImage: memedImage)
+        SaverSharer(self).share(meme)
     }
     
     @IBAction func OnPickClicked(_ sender: UIBarButtonItem) {
@@ -57,10 +58,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+        onImagePicked(info: info)
+        dismiss(animated: true, completion: nil)
+    }
+
+    private func onImagePicked(info: [String: Any]) {
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             uiImageView.image = image
+            shareButton.isEnabled = true
         }
-        dismiss(animated: true, completion: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
