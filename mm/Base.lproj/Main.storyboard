@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GBu-T9-3wh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,56 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Item 2-->
+        <scene sceneID="fHV-jV-Xup">
+            <objects>
+                <viewController id="0Gt-nd-Gvc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7We-CX-At9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Fhv-ug-MEO"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="25U-p2-KZi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KpT-jl-PpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1052" y="578"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="cZC-rW-oRt">
+            <objects>
+                <viewController id="XLk-M6-GA1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="alT-cs-dcf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="pdT-Ce-3hT"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="elv-51-AbS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFK-La-Se5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1052" y="-478"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jgM-FO-8Qc">
+            <objects>
+                <tabBarController id="GBu-T9-3wh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mw6-IY-yei">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XLk-M6-GA1" kind="relationship" relationship="viewControllers" id="Xmz-Bo-OZR"/>
+                        <segue destination="0Gt-nd-Gvc" kind="relationship" relationship="viewControllers" id="GZX-KO-FaR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NH3-lO-vPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2335" y="34"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
