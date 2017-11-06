@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="fHV-jV-Xup">
             <objects>
                 <viewController id="0Gt-nd-Gvc" sceneMemberID="viewController">
@@ -19,13 +19,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Fhv-ug-MEO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="25U-p2-KZi"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-list-filled" selectedImage="icons8-list-filled" id="25U-p2-KZi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KpT-jl-PpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1052" y="578"/>
         </scene>
-        <!--Item 1-->
+        <!--View Controller-->
         <scene sceneID="cZC-rW-oRt">
             <objects>
                 <viewController id="XLk-M6-GA1" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="pdT-Ce-3hT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="elv-51-AbS"/>
+                    <tabBarItem key="tabBarItem" image="icons8-grid-filled" selectedImage="icons8-grid-filled" id="elv-51-AbS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gFK-La-Se5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,4 +141,8 @@
             <point key="canvasLocation" x="76" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-grid-filled" width="25" height="25"/>
+        <image name="icons8-list-filled" width="25" height="25"/>
+    </resources>
 </document>
