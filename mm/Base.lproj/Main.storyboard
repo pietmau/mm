@@ -133,7 +133,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sent memes (list)" id="n57-Jx-VTb">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-plus-math-filled" id="N0Y-1F-cqC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-plus-math-filled" id="N0Y-1F-cqC">
+                            <connections>
+                                <action selector="onAddClicked:" destination="w3y-jQ-G8n" id="Uz2-d3-wKd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utY-RW-oes" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,7 +147,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="mm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
