@@ -24,15 +24,16 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListElement", for: indexPath)
+        var cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "ListElement", for: indexPath)
+        
         let meme = getMemes()[indexPath.row]
-        if let top = cell.viewWithTag(2) as! UILabel!{
+        if let top = cell.textLabel as! UILabel!{
             top.text = meme.topText
         }
-        if let bottom = cell.viewWithTag(3) as! UILabel!{
+        if let bottom = cell.detailTextLabel as! UILabel!{
             bottom.text = meme.bottomText
         }
-        if let imageView = cell.viewWithTag(1) as! UIImageView!{
+        if let imageView = cell.imageView as! UIImageView!{
             imageView.image = meme.memedImage
         }
         return cell
