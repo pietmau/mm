@@ -1,10 +1,3 @@
-//
-//  TableViewController.swift
-//  mm
-//
-//  Created by Maurizio Pietrantuono on 06/11/2017.
-//  Copyright © 2017 Maurizio Pietrantuono. All rights reserved.
-//
 
 import UIKit
 
@@ -21,10 +14,15 @@ class TableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return getMemes().count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListElement", for: indexPath)
         let meme = getMemes()[indexPath.row]
