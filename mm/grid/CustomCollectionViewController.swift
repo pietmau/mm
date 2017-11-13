@@ -12,11 +12,12 @@ private let reuseIdentifier = "Cell"
 
 class CustomCollectionViewController: UICollectionViewController {
     
-    @IBAction func onAddClicked(_ sender: Any) {
-        let controller: ViewController = storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        present(controller, animated: true, completion: nil)
-    }
     
+    
+//    @IBAction func onAddClicked(_ sender: Any) {
+//        let controller: ViewController = storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+//        present(controller, animated: true, completion: nil)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,6 @@ class CustomCollectionViewController: UICollectionViewController {
         
         // Do any additional setup after loading the view.
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,9 +47,9 @@ class CustomCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCollectionViewCell
+        let meme = getMemes()[indexPath.row]
+        cell.image.image = meme.memedImage
         return cell
     }
-    
-    
 }
