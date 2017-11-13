@@ -2,7 +2,7 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,7 +13,7 @@ class TableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.separatorStyle = .none
@@ -26,20 +26,17 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "ListElement", for: indexPath)
-        
         let meme = getMemes()[indexPath.row]
-        if let top = cell.textLabel {
-            top.text = meme.topText
-        }
-        if let bottom = cell.detailTextLabel {
-            bottom.text = meme.bottomText
-        }
-        if let imageView = cell.imageView {
-            imageView.image = meme.memedImage
+        if let image = cell.viewWithTag(1) as? UIImageView{
+            image.image = meme.memedImage
         }
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
     private func getMemes()->[Meme]{
         return (UIApplication.shared.delegate as! AppDelegate).memes
     }
