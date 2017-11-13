@@ -57,9 +57,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="vJL-hE-B73"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sent memes (grid)" id="AQO-xN-WvF">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="dYX-9d-6S3"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Sent memes (grid)" id="AQO-xN-WvF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRR-kF-twn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,14 +97,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YgJ-nf-9IL">
-                                            <rect key="frame" x="16" y="5" width="33" height="20"/>
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gYj-RD-nNW">
-                                            <rect key="frame" x="16" y="25" width="44" height="15"/>
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -122,7 +120,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sent memes (list)" id="n57-Jx-VTb">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-plus-math-filled" id="N0Y-1F-cqC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="N0Y-1F-cqC">
                             <connections>
                                 <action selector="onAddClicked:" destination="w3y-jQ-G8n" id="Uz2-d3-wKd"/>
                             </connections>
@@ -160,23 +158,36 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hzn-0a-wvg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzZ-D7-GDq">
-                                <rect key="frame" x="0.0" y="577" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="547" width="375" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAE-px-i1W">
-                                <rect key="frame" x="0.0" y="20" width="40" height="30"/>
-                                <state key="normal" title="Share"/>
-                                <connections>
-                                    <action selector="onShareClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fHm-Vp-kuJ"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58S-h6-e36">
-                                <rect key="frame" x="0.0" y="47" width="375" height="30"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lra-gb-gnJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="9Ra-3C-Drx">
+                                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="action" id="ESX-LN-D1p" userLabel="UIBarButtonSystemItem.Refresh">
+                                            <connections>
+                                                <action selector="onShareClicked:" destination="BYZ-38-t0r" id="MZW-W7-zb7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="aM0-JY-N6w">
+                                            <connections>
+                                                <action selector="onCancelClicked:" destination="BYZ-38-t0r" id="Kv1-LD-sqO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58S-h6-e36">
+                                <rect key="frame" x="0.0" y="110" width="375" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -184,28 +195,32 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="58S-h6-e36" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="2Lj-F0-LGa"/>
                             <constraint firstItem="s5A-GR-IO4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4ID-up-sfo"/>
+                            <constraint firstItem="lra-gb-gnJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5KT-bc-n8q"/>
                             <constraint firstItem="hzn-0a-wvg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9EN-EM-0yT"/>
-                            <constraint firstItem="hzn-0a-wvg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CBq-I3-Xzb"/>
                             <constraint firstItem="s5A-GR-IO4" firstAttribute="top" secondItem="hzn-0a-wvg" secondAttribute="bottom" id="CF4-CK-FdA"/>
-                            <constraint firstItem="NAE-px-i1W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ChI-D3-CXL"/>
-                            <constraint firstItem="NAE-px-i1W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DbM-I2-uQR"/>
                             <constraint firstItem="58S-h6-e36" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JNW-su-qMO"/>
+                            <constraint firstItem="lra-gb-gnJ" firstAttribute="leading" secondItem="58S-h6-e36" secondAttribute="leading" id="Jqk-CK-vdA"/>
                             <constraint firstItem="pzZ-D7-GDq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jr8-O0-Hzk"/>
+                            <constraint firstItem="lra-gb-gnJ" firstAttribute="trailing" secondItem="58S-h6-e36" secondAttribute="trailing" id="NH0-kO-kbg"/>
+                            <constraint firstItem="pzZ-D7-GDq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OVA-vz-3J8"/>
                             <constraint firstItem="s5A-GR-IO4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UgM-XV-ksv"/>
+                            <constraint firstItem="58S-h6-e36" firstAttribute="top" secondItem="lra-gb-gnJ" secondAttribute="bottom" constant="46" id="Wo4-9I-hze"/>
                             <constraint firstItem="58S-h6-e36" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YXW-Y7-ddd"/>
                             <constraint firstItem="s5A-GR-IO4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ahj-az-nTN"/>
                             <constraint firstItem="hzn-0a-wvg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bHM-E8-jmC"/>
-                            <constraint firstItem="s5A-GR-IO4" firstAttribute="top" secondItem="pzZ-D7-GDq" secondAttribute="bottom" constant="16" id="jaU-0G-vFf"/>
+                            <constraint firstItem="58S-h6-e36" firstAttribute="top" secondItem="lra-gb-gnJ" secondAttribute="bottom" constant="46" id="bRJ-HF-sFd"/>
+                            <constraint firstItem="hzn-0a-wvg" firstAttribute="top" secondItem="lra-gb-gnJ" secondAttribute="bottom" id="bSy-AQ-f6D"/>
+                            <constraint firstItem="s5A-GR-IO4" firstAttribute="top" secondItem="pzZ-D7-GDq" secondAttribute="bottom" constant="46" id="hlm-Ks-MZe"/>
                             <constraint firstItem="pzZ-D7-GDq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vhw-2o-ydH"/>
+                            <constraint firstItem="lra-gb-gnJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yuC-Bg-z6g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="bottomText" destination="pzZ-D7-GDq" id="rye-2V-eth"/>
                         <outlet property="camUiBarButtonItem" destination="pnD-1j-Nxk" id="Anz-KC-dJe"/>
-                        <outlet property="shareButton" destination="NAE-px-i1W" id="sUi-ZZ-GwM"/>
+                        <outlet property="shareButton" destination="ESX-LN-D1p" id="yeY-1g-A2O"/>
                         <outlet property="topText" destination="58S-h6-e36" id="ETb-9I-DKF"/>
                         <outlet property="uiImageView" destination="hzn-0a-wvg" id="6py-RS-o6F"/>
                     </connections>
@@ -218,6 +233,5 @@
     <resources>
         <image name="icons8-grid-filled" width="25" height="25"/>
         <image name="icons8-list-filled" width="25" height="25"/>
-        <image name="icons8-plus-math-filled" width="25" height="25"/>
     </resources>
 </document>

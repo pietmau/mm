@@ -16,6 +16,7 @@ class TableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tableView.separatorStyle = .none
         self.tableView.reloadData()
     }
     
@@ -24,16 +25,16 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "ListElement", for: indexPath)
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "ListElement", for: indexPath)
         
         let meme = getMemes()[indexPath.row]
-        if let top = cell.textLabel as! UILabel!{
+        if let top = cell.textLabel {
             top.text = meme.topText
         }
-        if let bottom = cell.detailTextLabel as! UILabel!{
+        if let bottom = cell.detailTextLabel {
             bottom.text = meme.bottomText
         }
-        if let imageView = cell.imageView as! UIImageView!{
+        if let imageView = cell.imageView {
             imageView.image = meme.memedImage
         }
         return cell

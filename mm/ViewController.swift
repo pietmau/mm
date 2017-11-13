@@ -3,20 +3,20 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    
     @IBOutlet  var camUiBarButtonItem: UIBarButtonItem!
 
     @IBOutlet  var uiImageView: UIImageView!
 
     @IBOutlet  var topText: UITextField!
-    
-    @IBOutlet  var shareButton: UIButton!
-    
+       
     @IBOutlet  var bottomText: UITextField!
 
     let topDelegate = CustomTextDelegate()
 
     let bottomDelegate = CustomTextDelegate()
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         camUiBarButtonItem.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
@@ -46,6 +46,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         showPicker(source: .photoLibrary)
     }
 
+    @IBAction func onCancelClicked(_ sender: Any) {
+            dismiss(animated: true, completion: {})
+    }
+    
     @IBAction func onCamClicked(_ sender: UIBarButtonItem) {
         showPicker(source: .camera)
     }
