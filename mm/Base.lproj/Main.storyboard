@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="Qus-wE-qsj" kind="relationship" relationship="rootViewController" id="sgS-gF-Mmo"/>
+                        <segue destination="0GJ-S2-aYI" kind="relationship" relationship="rootViewController" id="kxr-ma-dTh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6G-32-hKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,59 +48,45 @@
             <point key="canvasLocation" x="-1442" y="-375"/>
         </scene>
         <!--Sent memes (grid)-->
-        <scene sceneID="6VU-ey-d9r">
+        <scene sceneID="DoI-EG-Ynd">
             <objects>
-                <viewController id="Qus-wE-qsj" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jdb-92-w2m">
+                <collectionViewController id="0GJ-S2-aYI" customClass="CustomCollectionViewController" customModule="mm" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kqR-3g-z89">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gr2-sL-ZPE">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I7o-kS-UJN">
-                                    <size key="itemSize" width="114" height="119"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="OAF-ox-s7L" customClass="CustomCollectionViewCell" customModule="mm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mRn-Dr-09p">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <size key="customSize" width="120" height="120"/>
-                                        <connections>
-                                            <outlet property="image" destination="mRn-Dr-09p" id="63P-Rl-hmc"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="vJL-hE-B73"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Sent memes (grid)" id="AQO-xN-WvF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kkn-AO-DGp">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TQP-J8-wmP">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6cs-f9-Vfq">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="0GJ-S2-aYI" id="BYz-UO-far"/>
+                            <outlet property="delegate" destination="0GJ-S2-aYI" id="2R2-Uz-KgB"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Sent memes (grid)" id="vsQ-ls-r1E">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xNa-hZ-vSX">
                             <connections>
-                                <action selector="onAddClicked:" destination="Qus-wE-qsj" id="kfJ-Sc-zwp"/>
+                                <action selector="onAddClicked:" destination="0GJ-S2-aYI" id="5Y9-dW-iQw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RRR-kF-twn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bmE-Wz-Rm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-658.39999999999998" y="-365.66716641679164"/>
+            <point key="canvasLocation" x="-650" y="-376"/>
         </scene>
         <!--Item-->
         <scene sceneID="Sk2-g0-Ybg">
