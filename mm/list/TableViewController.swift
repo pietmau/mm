@@ -27,9 +27,9 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "ListElement", for: indexPath)
         let meme = getMemes()[indexPath.row]
-        if let image = cell.viewWithTag(1) as? UIImageView{
-            image.image = meme.memedImage
-        }
+        (cell.viewWithTag(1) as? UIImageView)?.image = meme.memedImage
+        (cell.viewWithTag(2) as? UILabel)?.text = meme.topText
+        (cell.viewWithTag(3) as? UILabel)?.text = meme.bottomText
         return cell
     }
 
